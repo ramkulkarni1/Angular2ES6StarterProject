@@ -20,10 +20,12 @@
     "@angular/router": "~3.1.1",
     "@angular/upgrade": "~2.1.1",
     "angular-in-memory-web-api": "~0.1.13",
-    "rxjs": "5.0.0-beta.12",
+    "bootstrap": "^3.3.7",
     "core-js": "2.4.1",
-    "zone.js": "^0.6.26",
-    "reflect-metadata": "^0.1.8"
+    "jquery": "^3.1.1",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "^0.6.26"
   },
   "devDependencies": {
     "babel-core": "6.17.0",
@@ -40,6 +42,7 @@
     "eslint-plugin-babel": "^3.2.0",
     "eslint-plugin-import": "^2.0.1",
     "extract-text-webpack-plugin": "1.0.1",
+    "file-loader": "^0.9.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^1.1.1",
     "html-loader": "0.4.4",
@@ -48,6 +51,7 @@
     "raw-loader": "^0.5.1",
     "source-map-loader": "0.1.5",
     "style-loader": "0.13.1",
+    "url-loader": "^0.5.7",
     "webpack": "1.13.3",
     "webpack-dev-server": "1.16.2",
     "webpack-merge": "0.15.0"

@@ -5,20 +5,20 @@
   <div class="header-links">
     <a href="#"
       routerLink="/login"
-      routerLinkActive="hide"
-      [class.show]="!loginService.isLoggedIn()"
-      [class.hide]="loginService.isLoggedIn()"
+      routerLinkActive="_hide"
+      [class._show]="!loginService.isLoggedIn()"
+      [class._hide]="loginService.isLoggedIn()"
     >Login</a>
 
     <a href="#"
       (click)="logout()"
-      [class.show]="loginService.isLoggedIn()"
-      [class.hide]="!loginService.isLoggedIn()"
+      [class._show]="loginService.isLoggedIn()"
+      [class._hide]="!loginService.isLoggedIn()"
     >Logout</a>
 
     <a href="#"
       routerLink="/home"
-      routerLinkActive="hide"
+      routerLinkActive="_hide"
     >Home</a>
   <div>
 </div>

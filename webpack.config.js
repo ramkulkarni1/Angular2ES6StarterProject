@@ -13,9 +13,8 @@ const webpackConfig = {
   web_server_port: WEB_SERVER_PORT,
   context: path.join(__dirname, SRC_FOLDER),
   entry: {
-    bundle: [
-      './js/index.js',
-    ]
+    bundle: [ './js/index.js' ],
+    vendor: './js/vendor.js'
   },
   output: {
     path: path.join(__dirname, OUTPUT_FOLDER),
@@ -44,6 +43,10 @@ const webpackConfig = {
       {
         test: /\.html$/,
         loader: 'html?attrs=false&caseSensitive&removeAttributeQuotes=false'
+      },
+      {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loader: 'url-loader?limit=100000'
       }
     ]
   },
@@ -64,6 +67,11 @@ const webpackConfig = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.DedupePlugin(),
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery'
+    }),
     new CopyPlugin([
       { from: 'html/*.html', flatten: true },
       // { from: 'html/templates/*.html', to: path.join(__dirname, `${OUTPUT_FOLDER}/templates`), flatten: true },
