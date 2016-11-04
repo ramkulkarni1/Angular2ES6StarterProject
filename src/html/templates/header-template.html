@@ -1,0 +1,24 @@
+<div class="header">
+  <div class='header-title'>
+    Angular2 + ES6 Starter Demo
+  </div>
+  <div class="header-links">
+    <a href="#"
+      routerLink="/login"
+      routerLinkActive="hide"
+      [class.show]="!loginService.isLoggedIn()"
+      [class.hide]="loginService.isLoggedIn()"
+    >Login</a>
+
+    <a href="#"
+      (click)="logout()"
+      [class.show]="loginService.isLoggedIn()"
+      [class.hide]="!loginService.isLoggedIn()"
+    >Logout</a>
+
+    <a href="#"
+      routerLink="/home"
+      routerLinkActive="hide"
+    >Home</a>
+  <div>
+</div>

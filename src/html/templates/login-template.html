@@ -1,0 +1,17 @@
+<h3>Login</h3>
+<div class="error" *ngIf="error">
+  {{error}}
+</div>
+<table>
+  <tr>
+    <td>User Name: </td>
+    <td><input [(ngModel)]="userName" type="text"></td>
+  </tr>
+  <tr>
+    <td>Password:</td>
+    <td><input [(ngModel)]="password" type="password"></td>
+  </tr>
+  <tr colspan="2">
+    <td><button (click)="login()">Submit</button></td>
+  </tr>
+</table>

@@ -1,0 +1,16 @@
+@import "common.less";
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+
+.main-div {
+    clear: both;
+    overflow: auto;
+    height: ~"calc(100% - @{headerHeight} - @{footerHeight} - @{footerBottom} - 5px)";
+}
+
+.error {
+  color: red;
+}
