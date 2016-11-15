@@ -1,0 +1,9 @@
+require('zone.js');
+require('reflect-metadata');
+require('@angular/platform-browser');
+require('@angular/core');
+require('@angular/common');
+require('@angular/http');
+require('@angular/router');
+require('@angular/forms');
+require('@angular/platform-browser-dynamic');
