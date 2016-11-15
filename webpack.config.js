@@ -13,8 +13,8 @@ const webpackConfig = {
   web_server_port: WEB_SERVER_PORT,
   context: path.join(__dirname, SRC_FOLDER),
   entry: {
+    vendor: './js/vendor.js',
     bundle: [ './js/index.js' ],
-    vendor: './js/vendor.js'
   },
   output: {
     path: path.join(__dirname, OUTPUT_FOLDER),
@@ -75,7 +75,8 @@ const webpackConfig = {
     new CopyPlugin([
       { from: 'html/*.html', flatten: true },
       // { from: 'html/templates/*.html', to: path.join(__dirname, `${OUTPUT_FOLDER}/templates`), flatten: true },
-    ])
+    ]),
+    new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.js"),
   ],
   resolve: {
     extensions: [ '', '.js', '.css', '.less' ],
